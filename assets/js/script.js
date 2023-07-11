@@ -55,19 +55,7 @@ let displayWeather = function(weatherData) {
         .then(function(response) {
             response.json().then(function(data) {
              
-                $("#uv-box").text(data.value);
-             
-                if(data.value >= 11) {
-                    $("#uv-box").css("background-color", "#6c49cb")
-                } else if (data.value < 11 && data.value >= 8) {
-                    $("#uv-box").css("background-color", "#d90011")
-                } else if (data.value < 8 && data.value >= 6) {
-                    $("#uv-box").css("background-color", "#f95901")
-                } else if (data.value < 6 && data.value >= 3) {
-                    $("#uv-box").css("background-color", "#f7e401")
-                } else {
-                    $("#uv-box").css("background-color", "#299501")
-                }      
+                $("#uv-box").text(data.value);     
             })
         });
 
